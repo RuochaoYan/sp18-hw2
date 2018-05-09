@@ -55,7 +55,7 @@ public class GlobeSortClient {
         long recieveTime = System.currentTimeMillis();
         long diff = recieveTime - sendTime;
         System.out.println("Round-trip time in milliseconds: " + diff);
-        System.out.println("Time on sorting in milliseconds: " + response.sorttime());
+        System.out.println("Time on sorting in milliseconds: " + response.getSorttime());
         System.out.println("Sorted array");
     }
 
