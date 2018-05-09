@@ -56,6 +56,11 @@ public class GlobeSortClient {
         long diff = recieveTime - sendTime;
         System.out.println("Round-trip time in milliseconds: " + diff);
         System.out.println("Time on sorting in milliseconds: " + response.getSorttime());
+        long oneWay = (diff - response.getSorttime()) / 2;
+        System.out.println("One-way time in milliseconds: " + oneWay);
+        System.out.println("Round-trip throughput (number of records sorted per second: " + values.size()/diff);
+        System.out.println("One-way throughput (number of records sorted per second: " + values.size()/oneWay);
+        
         System.out.println("Sorted array");
     }
 
